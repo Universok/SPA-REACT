@@ -1,42 +1,82 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  max-width: 100%;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Nav{
+  display: inline-block;
+  width: 100%
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  background-color: #333333;
+  width: 100%;
+  position: top
+  ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav li {
+  display: inline;
+  margin-right: 20px;
+  /* Reducido el margen para dispositivos más pequeños */
 }
 
-.card {
-  padding: 2em;
+/* Color de letras Menu */
+nav a {
+  text-decoration: none;
+  color: #e0a615;
+  font-size: 16px;
+
 }
 
-.read-the-docs {
-  color: #888;
+nav a:hover {
+  text-decoration: none;
+  font-weight: 400
+
 }
+
+.wrap {
+  max-width: 100%;
+  /* Haciendo que la imagen ocupe todo el ancho */
+  height: 100%;
+  /* Para mantener la relación de aspecto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Centrando la imagen */
+  background-size: cover;
+  background-position: cover;
+  background-size: 100%;
+  background-color: #333333;
+}
+
+/* Aquí colocamos las propiedades del texto sobrepuesto */
+.wrap-texto {
+  color: white;
+  text-align: center;
+  width: 100%;
+  /* Cambiado para que el texto sea más ancho en dispositivos pequeños */
+  font-weight: bold;
+  text-shadow: 0px 4px 4px #282828;
+  margin: 20px;
+  /* Espaciado para dispositivos pequeños */
+  padding: 100px;
+  /* Espaciado para dispositivos pequeños */
+  background-position: center;
+  /* Aumentando el radio para suavizar las esquinas */
+}
+
+.Bboycover {
+  max-width:100%;
+  max-height:100%;
+  display: flex;
+  margin: auto;
+}
+
+
+
+
