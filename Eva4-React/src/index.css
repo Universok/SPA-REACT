@@ -14,6 +14,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background: url("https://images2.alphacoders.com/701/701858.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

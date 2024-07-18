@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@madzadev/audio-player": "^2.1.13",
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3"
   }
 }
