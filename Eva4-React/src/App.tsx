@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Nav from './Components/Nav';
 import ContactForm from './Components/Formulario';
 import ContactList from './Components/ContactList';
 import CompAPIRequest from './Components/Api';
+
 
 interface ContactEntry {
     id: number;
@@ -11,6 +12,7 @@ interface ContactEntry {
 }
 
 function App() {
+    
     const [editEntry, setEditEntry] = useState<ContactEntry | null>(null);
 
     return (

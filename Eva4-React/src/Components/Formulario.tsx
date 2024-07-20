@@ -1,21 +1,26 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Interfaz para definir la estructura de un contacto
 interface ContactEntry {
     id: number;
     name: string;
     email: string;
 }
 
+// Interfaz para las props del componente ContactForm
 interface ContactFormProps {
     editEntry: ContactEntry | null;
     setEditEntry: (entry: ContactEntry | null) => void;
 }
 
 export default function ContactForm({ editEntry, setEditEntry }: ContactFormProps) {
+    // Estados para manejar los campos del formulario
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
+    // Efecto para cargar los datos del contacto a editar en el formulario
     useEffect(() => {
         if (editEntry) {
             setName(editEntry.name);
@@ -23,21 +28,25 @@ export default function ContactForm({ editEntry, setEditEntry }: ContactFormProp
         }
     }, [editEntry]);
 
+    // Función para manejar el envío del formulario
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const entries: ContactEntry[] = JSON.parse(localStorage.getItem('formEntries') || '[]');
         
         if (editEntry) {
+            // Actualizar un contacto existente
             const updatedEntries = entries.map(entry => 
                 entry.id === editEntry.id ? { ...entry, name, email } : entry
             );
             localStorage.setItem('formEntries', JSON.stringify(updatedEntries));
             setEditEntry(null);
         } else {
+            // Crear un nuevo contacto
             const newEntry = { name, email, id: Date.now() };
             localStorage.setItem('formEntries', JSON.stringify([...entries, newEntry]));
         }
 
+        // Limpiar el formulario y notificar cambios
         setName('');
         setEmail('');
         window.dispatchEvent(new Event('storageChange'));
