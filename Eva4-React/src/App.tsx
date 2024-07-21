@@ -3,6 +3,7 @@ import Nav from './Components/Nav';
 import ContactForm from './Components/Formulario';
 import ContactList from './Components/ContactList';
 import CompAPIRequest from './Components/Api';
+import ThemeToggle from './Components/DarkWhite';
 
 
 interface ContactEntry {
@@ -21,6 +22,7 @@ function App() {
             <CompAPIRequest />
             <ContactForm editEntry={editEntry} setEditEntry={setEditEntry} />
             <ContactList setEditEntry={setEditEntry} />
+            <ThemeToggle />
         </div>
     );
 }

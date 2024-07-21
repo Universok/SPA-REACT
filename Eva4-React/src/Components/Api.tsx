@@ -1,5 +1,7 @@
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "../App.css";
+
 
 // Definición de la interfaz Digimon para tipar los datos
 interface Digimon {
@@ -35,7 +37,7 @@ function App() {
     <div className="container-fluid min-vh-100 d-flex flex-column justify-content-between">
       {/* Encabezado de la aplicación */}
       <header className="text-center py-4 bg-primary text-white">
-        <h1>DigiExplorer.app</h1>
+        <h1>DigiExplorer</h1>
       </header>
 
       {/* Contenido principal */}
@@ -70,11 +72,6 @@ function App() {
           </div>
         </div>
       </main>
-
-      {/* Pie de página */}
-      <footer className="bg-light text-center py-3 mt-auto">
-        <p className="mb-0">© 2024 Explorador de Digimon. Datos proporcionados por la API de Digimon.</p>
-      </footer>
     </div>
   );
 }

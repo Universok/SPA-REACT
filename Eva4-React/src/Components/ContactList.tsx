@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "../App.css";
 
 // Interfaz para definir la estructura de un contacto
 interface ContactEntry {
@@ -63,6 +64,11 @@ export default function ContactList({ setEditEntry }: ContactListProps) {
                                 >
                                     Eliminar
                                 </button>
+                                <footer className="bg-light text-center text-lg-start mt-4">
+                                    <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+                                        © 2024 DIGIMON APP
+                                    </div>
+                                </footer>
                             </div>
                         </div>
                     </div>

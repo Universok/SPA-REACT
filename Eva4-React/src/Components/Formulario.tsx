@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../App.css";
+
 
 // Interfaz para definir la estructura de un contacto
 interface ContactEntry {
